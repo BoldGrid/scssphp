@@ -21,7 +21,7 @@ title: Changelog
   * Don't coerce anything into a map but throw an error if it's not at all matching a map (Cerdic)
   * In the `@atroot (#{with: media})` the interpolation has to be reparsed in the compiler before tryin
 g to manipulate as a map (Cerdic)
-  * Throw an error if positionnal and named passed, even on a splat... argument, except if this is the only one (Cerdic)
+  * Throw an error if positional and named passed, even on a splat... argument, except if this is the only one (Cerdic)
   * Fix map-remove() : second argument key can be a list of arguments (Cerdic)
   * Fix parsing value list in function call made of value list of 1 element (Cerdic)
   * Fix name of arguments on functions `mix(color1,color2)`, `map-merge()`, `comparable()`, `selector-extend()`, `selector-replace()`, `selector-parse()` (Cerdic)
