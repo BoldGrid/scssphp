@@ -10,34 +10,34 @@ title: Changelog
   * Partial fix of special cases in hsl/hsla functions (Cerdic)
   * In certain interpolations, the spec seems to prefer to force a double quote for output strings (Cerdic)
   * Fix list separated values with no delimiter with a keyword between two strings (Cerdic)
-  * Fix spaces escaping in {% raw %}@import{% endraw %} path strings (Cerdic)
+  * Fix spaces escaping in `@import` path strings (Cerdic)
   * Fix single/double quote escaping in single/double scope strings (stof)
-  * Add polyfill for {% raw %}mb_chr{% endraw %} (stof)
+  * Add polyfill for `mb_chr` (stof)
   * Refactor handling of stirngs and escape sequences (stof)
   * Fix the enclosedList parsing in a more generic way (Cerdic)
   * Parser: explicitly flatten where expected (Cerdic)
   * Color function can be called with a var(..) argument (Cerdic)
   * Throw an error when passing too many arguments (stof, Cerdic)
   * Don't coerce anything into a map but throw an error if it's not at all matching a map (Cerdic)
-  * In the {% raw %}@atroot (#{with: media}){% endraw %} the interpolation has to be reparsed in the compiler before tryin
+  * In the `@atroot (#{with: media})` the interpolation has to be reparsed in the compiler before tryin
 g to manipulate as a map (Cerdic)
   * Throw an error if positionnal and named passed, even on a splat... argument, except if this is the only one (Cerdic)
   * Fix map-remove() : second argument key can be a list of arguments (Cerdic)
   * Fix parsing value list in function call made of value list of 1 element (Cerdic)
-  * Fix name of arguments on functions {% raw %}mix(color1,color2){% endraw %}, {% raw %}map-merge(){% endraw %}, {% raw %}comparable(){% endraw %}, {% raw %}selector-extend(){% endraw %}, {% raw %}selector-replace(){% endraw %}, {% raw %}selector-parse(){% endraw %} (Cerdic)
-  * Fix {% raw %}saturate(50%){% endraw %} (Cerdic)
+  * Fix name of arguments on functions `mix(color1,color2)`, `map-merge()`, `comparable()`, `selector-extend()`, `selector-replace()`, `selector-parse()` (Cerdic)
+  * Fix `saturate(50%)` (Cerdic)
   * Throw an error if a value that should be in a range is not a numeric value (Cerdic)
   * Add error handling for invalid type in some color functions (Cerdic)
-  * Compiler: deprecated {% raw %}throwError(){% endraw %} (stof)
+  * Compiler: deprecated `throwError()` (stof)
   * Remove ignoreErrors mode (stof)
-  * {% raw %}--&{% endraw %} is a valid custom property (where {% raw %}&{% endraw %} should be interpreted as self selector) (Cerdic)
+  * `--&` is a valid custom property (where `&` should be interpreted as self selector) (Cerdic)
   * Replace self selector in target part before the pushExtends() (Cerdic)
   * Add SassException interface (stof)
   * Add a proper error when trying to take a modulo by 0 (stof)
-  * Properly detect the wrong operands for {% raw %}for{% endraw %} loops (stof)
+  * Properly detect the wrong operands for `for` loops (stof)
   * Fix the parsing of while(false) loop (stof)
   * Drop support for configuring precision (stof)
-  * {% raw %}bin/pscss{% endraw %} deprecated {% raw %}--continue-on-error{% endraw %} and --{% raw %}precision{% endraw %} (stof)
+  * `bin/pscss` deprecated `--continue-on-error` and --`precision` (stof)
   * Deprecation warning when call() is used with a string (Cerdic)
   * Introducing scss get-function() and T_FUNCTION_REFERENCE type (Cerdic)
   * Reorder color names (stof)
@@ -50,7 +50,7 @@ g to manipulate as a map (Cerdic)
   * Compiler: fix undefined offset 2 (chrisblakley)
   * Fix keyframe parsing in css files (dwachss, Cerdic)
   * In plain CSS, a property can only occur in a selector (ryssbowh, Cerdic)
-  * Compiler: add {% raw %}getSourcePosition(){% endraw %} (ryssbowh, robocoder)
+  * Compiler: add `getSourcePosition()` (ryssbowh, robocoder)
   * ParserException: add sourcePosition getter/setter (cbl, robocoder)
   * Cache: cache directory must exist and be writeable (robocoder)
   * Update sass-spec tests (2020.08.20)
@@ -61,7 +61,7 @@ g to manipulate as a map (Cerdic)
   * Fix arguments selector issue (stempora, Cerdic)
   * Fix regression when members units are not normalizable (jszczypk, Cerdic)
   * Remove box.json.dist from .gitattributes (reedy)
-  * 32-bit fixes for Base64VLQ {% raw %}encode(){% endraw %} and {% raw %}unique-id(){% endraw %} (remicollet, robocoder)
+  * 32-bit fixes for Base64VLQ `encode()` and `unique-id()` (remicollet, robocoder)
   * Fix index of map within list of maps (stempora, robocoder)
 * **1.1.0** -- Apr 21, 2020
   * Fix the handling of call traces for exceptions of native functions (stof)
@@ -70,9 +70,9 @@ g to manipulate as a map (Cerdic)
   * Qualify function calls when the compiler can optimize them (stof)
   * Remove deprecated Parser::to() and Parser::show() methods (robocoder)
 * **1.0.9** -- Apr 1, 2020
-  * Fix parsing issues around {% raw %}#, +, -, --{% endraw %} (Cerdic)
-  * Fix {% raw %}@import{% endraw %} compatibility (Cerdic)
-  * Add vendor-prefixed {% raw %}scssphp-glob(){% endraw %} function (havutcuoglu, robocoder)
+  * Fix parsing issues around `#, +, -, --` (Cerdic)
+  * Fix `@import` compatibility (Cerdic)
+  * Add vendor-prefixed `scssphp-glob()` function (havutcuoglu, robocoder)
   * Remove PHP version and mbstring.func_overload checks (KryukovDS, robocoder)
   * Fix multiple issues with Bootstrap 4.4.1 and master (fuzegit, Cerdic)
   * Fix variables interpolation bug (Seonic, Cerdic)
@@ -85,15 +85,15 @@ g to manipulate as a map (Cerdic)
   * Function compatibility issues with functions (abs, ceil, floor, max, min, percentage, random, round), units, and conversions. (Cerdic)
 * **1.0.7** -- Jan 31, 2020
   * Fix problem with Bootstrap 4.4 / Responsive containers (nvindice, Cerdic)
-  * Fix issue with pseudoelement selectors order in {% raw %}@extend{% endraw %}'ed elements (CrazyManLabs, Cerdic)
-  * {% raw %}example/Server.php{% endraw %} moved to https://github.com/scssphp/server
+  * Fix issue with pseudoelement selectors order in `@extend`'ed elements (CrazyManLabs, Cerdic)
+  * `example/Server.php` moved to https://github.com/scssphp/server
 * **1.0.6** -- Dec 12, 2019
   * Many sass-spec compatibility fixes (Cerdic)
   * Discriminate shorthands vs real divisions in border-radius property (joakipe, Cerdic)
   * Base64VLQ - 32-bit overflow fixes from Closure implementation (remicollet, robocoder)
   * Formatter for nested properties removes semicolon (Mythos07, Cerdic)
   * Variables scope issues (jducro, Cerdic)
-  * Using {% raw %}@extend{% endraw %} creates invalid output with nested classnames (bmbrands, Cerdic)
+  * Using `@extend` creates invalid output with nested classnames (bmbrands, Cerdic)
   * Fixed sourceMapGenerator bug if semicolons are stripped. (ugogon)
 * **1.0.5** -- Oct 3, 2019
   * interpolation fixes (Cerdic)
@@ -101,15 +101,15 @@ g to manipulate as a map (Cerdic)
   * undefined sourceIndex (connerbw, robocoder)
   * using is_null(), is_dir(), is_file() for consistency (robocoder)
 * **1.0.4** -- Sep 6, 2019
-  * {% raw %}border-radius{% endraw %} shorthand support (alex-shul, Cerdic)
-  * allow {% raw %}zip(){% endraw %} function to use all types as arguments (devdot, Cerdic)
-  * {% raw %}@each{% endraw %} forcing unwanted type conversion (devdot)
-  * {% raw %}rgb(){% endraw %} and colour compatibility improvements (Cerdic)
-  * {% raw %}str-splice{% endraw %} broken in php 7.4
+  * `border-radius` shorthand support (alex-shul, Cerdic)
+  * allow `zip()` function to use all types as arguments (devdot, Cerdic)
+  * `@each` forcing unwanted type conversion (devdot)
+  * `rgb()` and colour compatibility improvements (Cerdic)
+  * `str-splice` broken in php 7.4
   * composer and travis configuration updates
-  * remove obsolete {% raw %}Base64VLQEncoder{% endraw %} class
+  * remove obsolete `Base64VLQEncoder` class
 * **1.0.3** -- Aug 7, 2019
-  * {% raw %}@at-root{% endraw %}, {% raw %}@import{% endraw %}, and {% raw %}url(//host/image.png){% endraw %} fixes (Cerdic)
+  * `@at-root`, `@import`, and `url(//host/image.png)` fixes (Cerdic)
   * join operator with interpolated values vs vars or static values (julienmru, Cerdic)
   * Implemented passing Arguments to Content Blocks (jensniedling, Cerdic)
   * Support whitespaces inside :not() (schliesser)
@@ -119,8 +119,8 @@ g to manipulate as a map (Cerdic)
 * **1.0.1** -- July 6, 2019
   * Fix iteration on map (alexsaalberg049 , Cerdic)
   * More compatibility with reference implementation (Cerdic)
-  * Cache: bump {% raw %}CACHE_VERSION{% endraw %} (Cerdic)
-  * {% raw %}bin/pscss{% endraw %} requires php 5.6+ (robocder)
+  * Cache: bump `CACHE_VERSION` (Cerdic)
+  * `bin/pscss` requires php 5.6+ (robocder)
   * travis updates and improved tests (Cerdic)
   * Nested formatted improvements (Cerdic)
 * **1.0.0** -- June 4, 2019
@@ -130,48 +130,48 @@ g to manipulate as a map (Cerdic)
 * **0.8.4** -- June 18, 2019
   * This is the final tag on the leafo/scssphp repo; PHP requirements downgraded to 5.4+ for this repo/package only.
   * Support parent selector and selector functions (Cerdic)
-  * Improve {% raw %}and{% endraw %}/{% raw %}or{% endraw %} compatibility (robocoder)
+  * Improve `and`/`or` compatibility (robocoder)
   * Backslash newline fix (Netmosfera, Cerdic)
   * Variable nesting/scoping issue (dleffler, Cerdic)
   * Interpolation in block comments (vicary, Cerdic)
   * Parser should match some utf8 symbols (ostrolucky, Cerdic)
   * Incorrectly evaluating expressions within Unicode range (timknight, Cerdic)
   * Problem with first comment on ampersand-nested class (blackgearit, Cerdic)
-  * Parsing missing http(s) protocol from {% raw %}url(){% endraw %} (sebastianwebb, robocoder)
+  * Parsing missing http(s) protocol from `url()` (sebastianwebb, robocoder)
   * Add source column to thrown error message (slprime, robocoder)
   * Detect invalid CSS outside of selector (JMitnik, robocoder)
 * **0.8.3** -- May 31, 2019
   * grid-template-columns (gKreator, Cerdic)
-  * {% raw %}self{% endraw %} in selector and parse improvements (designerno1, Cerdic)
+  * `self` in selector and parse improvements (designerno1, Cerdic)
   * invalid css output when using interpolation with mixins (Jasonkoolman, Cerdic)
-  * parser error for {% raw %}@each $selector in & {...}{% endraw %} (wesleyvicthor, Cerdic)
-  * {% raw %}@extend{% endraw %} in extended class or placeholder, doesn't produce extended selector (dimitrov-adrian, Cerdic)
-  * weird {% raw %}@extend{% endraw %} behavior (Kenneth-KT, Cerdic)
+  * parser error for `@each $selector in & {...}` (wesleyvicthor, Cerdic)
+  * `@extend` in extended class or placeholder, doesn't produce extended selector (dimitrov-adrian, Cerdic)
+  * weird `@extend` behavior (Kenneth-KT, Cerdic)
   * nested selector issue (ruby vs libsass difference) (designerno1, Cerdic)
-  * {% raw %}pscss{% endraw %} exhausts memory (gsmith-daed, Cerdic)
-  * infinite loop compiling mixin with nested {% raw %}@content{% endraw %} (exigon, Cerdic)
+  * `pscss` exhausts memory (gsmith-daed, Cerdic)
+  * infinite loop compiling mixin with nested `@content` (exigon, Cerdic)
   * nested media queries error (arnoschaefer, Cerdic)
   * set upper bound for php version requirement (staabm)
   * "crunched" formatter features (Daijobou, Cerdic)
-  * line comments for {% raw %}@media{% endraw %} statements (gajcapuder, Cerdic)
+  * line comments for `@media` statements (gajcapuder, Cerdic)
   * failed interpolation in placeholder (GuidoJansen, Cerdic)
   * parentheses in selector causes loss of whitespace (Netmosfera, Cerdic)
 * **0.8.2** -- May 9, 2019
   * requires php 5.6+
 * **0.8.1** -- May 9, 2019
   * grid-row & grid-column shorthand (claytron5000, Cerdic)
-  * {% raw %}@{% endraw %}mixin {% raw %}@{% endraw %}supports {% raw %}@{% endraw %}include compilation error (geoidesic, Cerdic)
-  * {% raw %}@{% endraw %}media expression slicing (tdutrion, Cerdic)
-  * {% raw %}@{% endraw %}font-face fix (bloep, Cerdic)
+  * `@`mixin `@`supports `@`include compilation error (geoidesic, Cerdic)
+  * `@`media expression slicing (tdutrion, Cerdic)
+  * `@`font-face fix (bloep, Cerdic)
   * mixin crash fix (LucasSbBrands, Cerdic)
   * bracketed lists don't compile (pkerling, Cerdic)
   * wrap successive inline assign into one block (Cerdic)
-  * :not(), :nth-child() and other selectors before {% raw %}@{% endraw %}extend (STV11C, Cerdic)
+  * :not(), :nth-child() and other selectors before `@`extend (STV11C, Cerdic)
   * commentsSeen and phpdoc update (nextend)
 * **0.8.0** -- May 2, 2019
   * Variables from inner override variables in parents (Daijobou, Cerdic)
-  * Bootstrap issues with {% raw %}@{% endraw %}at-root, self (l2a, Cerdic)
-  * {% raw %}@{% endraw %}supports inside rule (Marat-Tanalin, Cerdic)
+  * Bootstrap issues with `@`at-root, self (l2a, Cerdic)
+  * `@`supports inside rule (Marat-Tanalin, Cerdic)
   * SourceMapGenerator Former: invalid offset (fabsn182)
   * Number parsing (ange007, robocoder)
   * Travis test updates (Cerdic)
@@ -218,7 +218,7 @@ g to manipulate as a map (Cerdic)
   * Server moved to exoample/ folder
   * Server::serveFrom() helper removed
   * Removed .phar build
-  * Workaround {% raw %}each(){% endraw %} deprecated in PHP 7.2RC (marinaglancy)
+  * Workaround `each()` deprecated in PHP 7.2RC (marinaglancy)
 * **0.6.7** -- February 23, 2017
   * fix list interpolation
   * pscss: enable --line-numbers and --debug-info for stdin
@@ -228,7 +228,7 @@ g to manipulate as a map (Cerdic)
   * Merge shared direct relationship when extending (FMCorz)
   * Extend resolution was generating invalid selectors (FMCorz)
   * Resolve function arguments using mixin content scope (FMCorz)
-  * Let {% raw %}@{% endraw %}content work when a block isn’t passed in. (diemer)
+  * Let `@`content work when a block isn’t passed in. (diemer)
 * **0.6.5** -- June 20, 2016
   * ignore BOM (nwiborg)
   * fix another mixin and variable scope issue (mahagr)
@@ -236,7 +236,7 @@ g to manipulate as a map (Cerdic)
   * preserve un-normalized variable name for error message (kissifrot)
 * **0.6.4** -- June 15, 2016
   * parsing multiple assignment flags (Limych)
-  * {% raw %}@{% endraw %}warn should not write to stdout (atomicalnet)
+  * `@`warn should not write to stdout (atomicalnet)
   * evaluating null and/or 'foo' (micranet)
   * case insensitive directives regression (Limych)
   * Compiler: scope change to some properties and methods to facilitate subclassing (jo)
@@ -251,16 +251,16 @@ g to manipulate as a map (Cerdic)
   * improve utf-8 support
 * **0.6.1** -- December 13, 2015
   * bin/pscss --continue-on-error
-  * fix BEM and {% raw %}@{% endraw %}extend infinite loop
+  * fix BEM and `@`extend infinite loop
   * Compiler: setIgnoreErrors(boolean)
   * exception refactoring
-  * implement {% raw %}@{% endraw %}extend !optional and `keywords($args)` built-in
+  * implement `@`extend !optional and `keywords($args)` built-in
 * **0.6.0** -- December 5, 2015
   * handle escaped quotes inside quoted strings (with and without interpolation present)
   * Compiler: undefined sourceParser when re-using a single Compiler instance
   * Parser: `getLineNo()` removed
 * **0.5.1** -- November 11, 2015
-  * {% raw %}@{% endraw %}scssphp-import-once
+  * `@`scssphp-import-once
   * avoid notices with custom error handlers that don't check if `error_reporting()` returns 0
 * **0.5.0** -- November 11, 2015
   * Raise minimum supported version to PHP 5.4
@@ -273,10 +273,10 @@ g to manipulate as a map (Cerdic)
 * **0.4.0** -- November 8, 2015
   * Parser: remove deprecated `show()` and `to()` methods
   * Parser, Compiler: convert stdClass to Block, Node, and OutputBlock abstractions
-  * New control directives: {% raw %}@{% endraw %}break, {% raw %}@{% endraw %}continue, and naked {% raw %}@{% endraw %}return
-  * New operator: {% raw %}<=>{% endraw %} (spaceship) operator
+  * New control directives: `@`break, `@`continue, and naked `@`return
+  * New operator: `<=>` (spaceship) operator
   * Compiler: `index()` - coerce first argument to list
-  * Compiler/Parser: fix {% raw %}@{% endraw %}media nested in mixin
+  * Compiler/Parser: fix `@`media nested in mixin
   * Compiler: output literal string instead of division-by-zero exception
   * Compiler: `str-slice()` - handle negative index
   * Compiler: pass kwargs to built-ins and user registered functions as 2nd argument (instead of Compiler instance)
@@ -285,13 +285,13 @@ g to manipulate as a map (Cerdic)
   * Compiler: can pass negative indices to `nth()` and `set-nth()`
   * Compiler: can pass map as args to mixin expecting varargs
   * Compiler: add coerceList(map)
-  * Compiler: improve {% raw %}@{% endraw %}at-root support
+  * Compiler: improve `@`at-root support
   * Nested formatter: suppress empty blocks
 * **0.3.2** -- October 4, 2015
-  * Fix {% raw %}@{% endraw %}extend behavior when interpolating a variable that contains a selector list
-  * Hoist {% raw %}@{% endraw %}keyframes so children selectors are not prefixed by parent selector
-  * Don't wrap {% raw %}@{% endraw %}import inside {% raw %}@{% endraw %}media query
-  * Partial {% raw %}@{% endraw %}at-root support; `with:` and `without:` not yet supported
+  * Fix `@`extend behavior when interpolating a variable that contains a selector list
+  * Hoist `@`keyframes so children selectors are not prefixed by parent selector
+  * Don't wrap `@`import inside `@`media query
+  * Partial `@`at-root support; `with:` and `without:` not yet supported
   * Partial `call()` support; `kwargs` not yet supported
   * String-based keys mismatch in map functions
   * Short-circuit evaluation for `and`, `or`, and `if()`
@@ -300,7 +300,7 @@ g to manipulate as a map (Cerdic)
   * Fix bootstrap v4-dev regression from 0.3.0
 * **0.3.0** -- September 6, 2015
   * Compiler getParsedFiles() now returns a map of imported files and their corresponding timestamps
-  * Fix multiple variable scope bugs, including {% raw %}@{% endraw %}each
+  * Fix multiple variable scope bugs, including `@`each
   * Fix regression from 0.2.1
 * **0.2.1** -- September 5, 2015
   * Fix map-get(null)
@@ -309,16 +309,16 @@ g to manipulate as a map (Cerdic)
   * Fix selector regression from 0.1.9
 * **0.2.0** -- August 25, 2015
   * Smaller git archives
-  * Detect {% raw %}@{% endraw %}import loops
+  * Detect `@`import loops
   * Doc blocks everywhere!
 * **0.1.10** -- August 23, 2015
-  * Fix 3 year old {% raw %}@{% endraw %}extend bug
+  * Fix 3 year old `@`extend bug
   * Fix autoloader. (ext)
 * **0.1.9** -- August 1, 2015
   * Adoption of the Sass Community Guidelines
   * Nested selector fixes with lists, interpolated string, and parent selector
   * Implement list-separator() and set-nth() built-ins
-  * Implement {% raw %}@{% endraw %}warn and {% raw %}@{% endraw %}error
+  * Implement `@`warn and `@`error
   * Removed spaceship operator pending discussion with reference implementators
 * **0.1.8** -- July 18, 2015
   * Online documentation moved to http://leafo.github.com/scssphp/
@@ -327,7 +327,7 @@ g to manipulate as a map (Cerdic)
   * Fix str-slice() - edge cases when starts-at or ends-at is 0
   * Fix type-of() - returns arglist for variable arguments
   * Fix !=
-  * Fix {% raw %}@{% endraw %}return inside {% raw %}@{% endraw %}each
+  * Fix `@`return inside `@`each
   * Add box support to generate .phar
 * **0.1.7** -- July 1, 2015
   * bin/pscss: added --line-numbers and --debug-info options
@@ -359,7 +359,7 @@ g to manipulate as a map (Cerdic)
 * **0.0.15** -- Aug 6, 2014
   * fix regression with default values in functions (torkiljohnsen)
 * **0.0.14** -- Aug 5, 2014
-  * {% raw %}@{% endraw %}keyframes $name - didn't work inside mixin (sergeylukin)
+  * `@`keyframes $name - didn't work inside mixin (sergeylukin)
   * Bourbon transform(translateX()) didn't work (dovy and greynor)
 * **0.0.13** -- Aug 4, 2014
   * handle If-None-Match in client request, and send ETag in response (NSmithUK)
@@ -381,10 +381,10 @@ g to manipulate as a map (Cerdic)
   * inline if should treat null as false (wonderslug)
   * optimizing toHSL() (jfsullivan)
 * **0.0.9** -- December 23, 2013
-  * fix {% raw %}@{% endraw %}for/{% raw %}@{% endraw %}while inside {% raw %}@{% endraw %}content block (sergeylukin)
+  * fix `@`for/`@`while inside `@`content block (sergeylukin)
   * fix functions in mixin_content (timonbaetz)
   * fix infinite loop when target extends itself (oscherler)
-  * fix function arguments are lost inside of {% raw %}@{% endraw %}content block
+  * fix function arguments are lost inside of `@`content block
   * allow setting number precision (kasperisager)
   * add public function helpers (toBool, get, findImport, assertList, assertColor, assertNumber, throwError) (Burgov, atdt)
   * add optional cache buster prefix to serve() method (iMoses)
@@ -398,7 +398,7 @@ g to manipulate as a map (Cerdic)
   * Improve filter precision.
   * Parsing large image data-urls does not work.
   * Add == and != ops for colors.
-  * {% raw %}@{% endraw %}if and {% raw %}@{% endraw %}while directives should treat null like false.
+  * `@`if and `@`while directives should treat null like false.
   * Add pscss as bin in composer.json (Christian Lück).
   * Fix !default bug (James Shannon, Alberto Aldegheri).
   * Fix mixin content includes (James Shannon, Christian Brandt).
@@ -406,8 +406,8 @@ g to manipulate as a map (Cerdic)
   * Fix interpolation bug in expToString() (Matti Jarvinen).
 * **0.0.5** -- March 11, 2013
   * Better compile time errors
-  * Fix top level properties inside of a nested `{% raw %}@{% endraw %}media` (Anthon Pang)
-  * Fix some issues with `{% raw %}@{% endraw %}extends` (Anthon Pang)
+  * Fix top level properties inside of a nested `@media` (Anthon Pang)
+  * Fix some issues with `@extends` (Anthon Pang)
   * Enhanced handling of `null` (Anthon Pang)
   * Helper functions shouldn't mix with css builtins (Anthon Pang)
   * Enhance selector parsing (Guilherme Blanco, Anthon Pang)
@@ -421,7 +421,7 @@ g to manipulate as a map (Cerdic)
   * Add `ie_hex_str`, `abs`, `min`, `max` functions (Martin Hasoň)
   * Ignore expressions inside of `calc()` (Martin Hasoň)
   * Improve operator evaluation (Martin Hasoň)
-  * Add [`{% raw %}@{% endraw %}content`](http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#mixin-content) support.
+  * Add [`@content`](http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#mixin-content) support.
   * Misc bug fixes.
 * **0.0.3** -- August 2nd, 2012
   * Add missing and/or/not operators.
