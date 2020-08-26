@@ -5,6 +5,57 @@ title: Changelog
 
 ## Changelog
 
+* **1.2** -- Aug 26, 2020
+  * Many, many sass-spec test improvements (stof, Cerdic)
+  * Partial fix of special cases in hsl/hsla functions (Cerdic)
+  * In certain interpolations, the spec seems to prefer to force a double quote for output strings (Cerdic)
+  * Fix list separated values with no delimiter with a keyword between two strings (Cerdic)
+  * Fix spaces escaping in @import path strings (Cerdic)
+  * Fix single/double quote escaping in single/double scope strings (stof)
+  * Add polyfill for {% raw %}mb_chr{% endraw %} (stof)
+  * Refactor handling of stirngs and escape sequences (stof)
+  * Fix the enclosedList parsing in a more generic way (Cerdic)
+  * Parser: explicitly flatten where expected (Cerdic)
+  * Color function can be called with a var(..) argument (Cerdic)
+  * Throw an error when passing too many arguments (stof, Cerdic)
+  * Don't coerce anything into a map but throw an error if it's not at all matching a map (Cerdic)
+  * In the @atroot (#{with: media}) the interpolation has to be reparsed in the compiler before tryin
+g to manipulate as a map (Cerdic)
+  * Throw an error if positionnal and named passed, even on a splat... argument, except if this is the only one (Cerdic)
+  * Fix map-remove() : second argument key can be a list of arguments (Cerdic)
+  * Fix parsing value list in function call made of value list of 1 element (Cerdic)
+  * Fix name of arguments on functions {% raw %}mix(color1,color2){% endraw %}, {% raw %}map-merge(){% endraw %}, {% raw %}comparable(){% endraw %}, {% raw %}selector-extend(){% endraw %}, {% raw %}selector-replace(){% endraw %}, {% raw %}selector-parse(){% endraw %} (Cerdic)
+  * Fix {% raw %}saturate(50%){% endraw %} (Cerdic)
+  * Throw an error if a value that should be in a range is not a numeric value (Cerdic)
+  * Add error handling for invalid type in some color functions (Cerdic)
+  * Compiler: deprecated {% raw %}throwError(){% endraw %} (stof)
+  * Remove ignoreErrors mode (stof)
+  * {% raw %}--&{% endraw %} is a valid custom property (where {% raw %}&{% endraw %} should be interpreted as self selector) (Cerdic)
+  * Replace self selector in target part before the pushExtends() (Cerdic)
+  * Add SassException interface (stof)
+  * Add a proper error when trying to take a modulo by 0 (stof)
+  * Properly detect the wrong operands for {% raw %}for{% endraw %} loops (stof)
+  * Fix the parsing of while(false) loop (stof)
+  * Drop support for configuring precision (stof)
+  * {@ raw %}bin/pscss{@ endraw %} deprecated {% raw %}--continue-on-error{% endraw %} and --{% raw %}precision{% endraw %} (stof)
+  * Deprecation warning when call() is used with a string (Cerdic)
+  * Introducing scss get-function() and T_FUNCTION_REFERENCE type (Cerdic)
+  * Reorder color names (stof)
+  * Change output order for nested selectors (stof)
+  * Simplify the handling of comments to be more spec-compliant (stof)
+  * Refactor the format of the output for debug and warn directives (stof)
+  * Discard comments in include arguments (stof)
+  * Fix parsing of id tokens in values (stof)
+  * Respect precision when computing alpha channel (stof)
+  * Compiler: fix undefined offset 2 (chrisblakley)
+  * Fix keyframe parsing in css files (dwachss, Cerdic)
+  * In plain CSS, a property can only occur in a selector (ryssbowh, Cerdic)
+  * Compiler: add {% raw %}getSourcePosition(){% endraw %} (ryssbowh, robocoder)
+  * ParserException: add sourcePosition getter/setter (cbl, robocoder)
+  * Cache: cache directory must exist and be writeable (robocoder)
+  * Update sass-spec tests (2020.08.20)
+  * Update to PSR-12 (robocoder)
+  * Add php 8 nightly to Travis CI (robocoder)
 * **1.1.1** -- Jun 4, 2020
   * Fix extend and class concatenation (develth, Cerdic)
   * Fix arguments selector issue (stempora, Cerdic)
@@ -166,7 +217,7 @@ title: Changelog
 * **0.7.1** -- October 13, 2017
   * Server moved to exoample/ folder
   * Server::serveFrom() helper removed
-  * Removed .phar build 
+  * Removed .phar build
   * Workaround {% raw %}each(){% endraw %} deprecated in PHP 7.2RC (marinaglancy)
 * **0.6.7** -- February 23, 2017
   * fix list interpolation
